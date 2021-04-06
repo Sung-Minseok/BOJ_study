@@ -23,10 +23,10 @@ for i in range(n-7):
         black_cnt = 0
         for k in range(i, i+8):
             for l in range(j, j+8):
-                if(k%2 == l%2):
-                    if board[k][l] == 'W':
-                        black_cnt += 1
-                    else:
+                if(k%2 == l%2):     #board의 행,렬이 홀,홀/ 짝,짝 인지 확인
+                    if board[k][l] == 'W':  #(0,0)이 W일 때
+                        black_cnt += 1      
+                    else:                   #(0,0)이 B일 때
                         white_cnt += 1
                 else:
                     if board[k][l] == 'B':
