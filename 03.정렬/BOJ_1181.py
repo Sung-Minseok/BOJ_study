@@ -15,12 +15,11 @@ word_list = []
 for _ in range(int(input())):
     word_list.append(str(input()))
 
-word_list = set(word_list)
+word_list = set(word_list)      #중복제거
 sorted_list = []
 for word in word_list:
     sorted_list.append([word, len(word)])
-
-sorted_list.sort(key=lambda word : [word[1], word[0]])
+sorted_list.sort(key=lambda word : [word[1], word[0]])  #정렬
 for word in sorted_list:
     print(word[0])
 
